@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 import streamlit as st
 
-#pipeline = pickle.load(open('pipe.pkl','rb'))
+pipeline = pickle.load(open('pipe.pkl','rb'))
 
 teams = ['West Indies', 'England', 'South Africa', 'Pakistan',
        'New Zealand', 'Australia', 'Afghanistan', 'India', 'Bangladesh',
@@ -70,7 +70,7 @@ if st.button("Predict Score"):
        'middle_order_batsmen':middle_order, 'lower_order_batsmen':bottom_order, 'tail_order_batsmen':tail,
        'pressure_play':pressure, 'last_5_overs_score':last_five, 'agressive':agresive}, index=[0])
     
-    result = pickle.load(open('pipe.pkl', 'rb')).predict(input_df)
+    result = pipeline.predict(input_df)
     
     st.header("Predicted Score should be between: " + str(int(result[0])-8) + " - " + str(int(result[0])+8))
     
