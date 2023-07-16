@@ -27,6 +27,6 @@ The primary objective here is to predict the final score in the first innings at
 5. The model is built to be deployed on streamlit.
   - But to actually deploy, uploading the `pickle` file on github was not aloud due to huge size. Hence, uploading a preview below:
 
-![](https://github.com/Your_Repository_Name/Your_GIF_Name.gif)
+![([https://github.com/Your_Repository_Name/Your_GIF_Name.gif)]
 
 
