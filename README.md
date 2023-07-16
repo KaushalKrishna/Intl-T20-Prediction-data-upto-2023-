@@ -25,7 +25,8 @@ The primary objective here is to predict the final score in the first innings at
   - Built a `RandomForest Regression` model with __93% R2 Score__ (with a standard deviation of 0.001 with 3Fold CV)
 
 5. The model is built to be deployed on streamlit.
-  - But to actually deploy, uploading the `pickle` file on github was not aloud due to huge size. Hence, uploading a preview below:
+
+   ## Link: <a href="https://kaushalt20.streamlit.app/">https://kaushalt20.streamlit.app/</a>
 
 ![](https://s11.gifyu.com/images/SW8A1.gif)
 
