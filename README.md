@@ -28,6 +28,6 @@ The primary objective here is to predict the final score in the first innings at
   - But to actually deploy, uploading the `pickle` file on github was not aloud due to huge size. Hence, uploading a preview below:
 
 
-<center><a href="https://s11.gifyu.com/images/SW8A1.gif"></a>center>
+<center><a href="https://s11.gifyu.com/images/SW8A1.gif"></a><center>
 
 
