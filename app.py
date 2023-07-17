@@ -51,7 +51,10 @@ venues = ['Central Broward Regional Park Stadium Turf Ground',
        'Sardar Patel Stadium, Motera']
 
 st.title("International T20 Target Score Predictor")
-st.markdown("""Predict the __`target score`__ for the T20 match you're watching right now with this tool and stay ahead of the game! """)
+st.markdown("""Predict the __`target score`__ for the T20 match you're watching right now with this tool and stay ahead of the game! 
+
+_PS: This works well above 6 overs_
+""")
 col1, col2 = st.columns(2)
 
 with col1:
@@ -102,8 +105,8 @@ if st.button("Predict Score"):
        'pressure_play':pressure, 'last_5_overs_score':last_five, 'agressive':agresive}, index=[0])
     
     result = pipeline.predict(input_df)
-    st.header("Predicted Score : " + str(int(result[0])))
-    #st.header("Predicted Score should be between: " + str(int(result[0])+10) + " - " + str(int(result[0])+20))
+    #st.header("Predicted Score : " + str(int(result[0])))
+    st.header("Predicted Score should be between: " + str(int(result[0])-5) + " - " + str(int(result[0])+12))
     
     pass
 
