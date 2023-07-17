@@ -31,5 +31,5 @@ The primary objective here is to predict the final score in the first innings at
 
    ## Link: <a href="https://kaushalt20.streamlit.app/">https://kaushalt20.streamlit.app/</a>
 
-![]
+![](https://github.com/KaushalKrishna/Intl-T20-Prediction-data-upto-2023-/blob/main/Screenshot%202023-07-17%20at%209.03.01%20PM.png)
 
