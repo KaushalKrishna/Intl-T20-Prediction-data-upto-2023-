@@ -31,7 +31,9 @@ with col2:
     
 city = st.selectbox('Select city', sorted(cities))
 
-col3,col4,col5 = st.columns(3)
+col3 = st.columns(1)
+
+col4, col5 = st.columns(2)
 
 with col3:
     current_score = st.number_input('Current Score:')
