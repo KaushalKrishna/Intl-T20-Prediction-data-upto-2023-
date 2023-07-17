@@ -72,7 +72,7 @@ if st.button("Predict Score"):
     
     result = pipeline.predict(input_df)
     
-    st.header("Predicted Score should be between: " + str(int(result[0])+11) + " - " + str(int(result[0])+22))
+    st.header("Predicted Score should be between: " + str(int(result[0])+10) + " - " + str(int(result[0])+20))
     
     pass
 
