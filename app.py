@@ -9,7 +9,7 @@ teams = ['West Indies', 'England', 'South Africa', 'Pakistan',
        'New Zealand', 'Australia', 'Afghanistan', 'India', 'Bangladesh',
        'Sri Lanka', 'Zimbabwe']
 
-venues = [[['Central Broward Regional Park Stadium Turf Ground',
+venues = ['Central Broward Regional Park Stadium Turf Ground',
        'Beausejour Stadium, Gros Islet', 'Trent Bridge', 'Newlands',
        'The Wanderers Stadium, Johannesburg', 'Westpac Stadium',
        'Shere Bangla National Stadium, Mirpur', 'Harare Sports Club',
