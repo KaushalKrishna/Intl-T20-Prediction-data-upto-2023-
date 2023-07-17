@@ -22,11 +22,14 @@ The primary objective here is to predict the final score in the first innings at
       - Agressive stance
 
 4. Finally, preparing the data for modelling and retaining columns which had value.
-  - Built a `RandomForest Regression` model with __93% R2 Score__ (with a standard deviation of 0.001 with 3Fold CV)
+  - Built a `XGB Regressor` model with
+    - __95.3% R2 Score__
+    - __RMSE__ of __5.2__
+    (with a standard deviation of 0.001 with 3Fold CV)
 
 5. The model is now deployed on streamlit.
 
    ## Link: <a href="https://kaushalt20.streamlit.app/">https://kaushalt20.streamlit.app/</a>
 
-![](https://s11.gifyu.com/images/SW8A1.gif)
+![]
 
