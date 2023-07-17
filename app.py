@@ -102,8 +102,8 @@ if st.button("Predict Score"):
        'pressure_play':pressure, 'last_5_overs_score':last_five, 'agressive':agresive}, index=[0])
     
     result = pipeline.predict(input_df)
-    st.header("Predicted Score : " + str(int(result[0]))
-    st.header("Predicted Score should be between: " + str(int(result[0])+10) + " - " + str(int(result[0])+20))
+    st.header("Predicted Score : " + str(int(result[0])))
+    #st.header("Predicted Score should be between: " + str(int(result[0])+10) + " - " + str(int(result[0])+20))
     
     pass
 
