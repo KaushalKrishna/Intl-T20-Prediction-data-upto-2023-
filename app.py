@@ -65,21 +65,21 @@ venues = st.selectbox('Select Venue:', sorted(venues))
 col3, col4 = st.columns(2)
 
 with col3:
-    current_score = st.number_input('Current Score:')
+    current_score = st.number_input('Current Score:',min_value=0, max_value=400, value=100, step=1)
 
 with col4:
-    wickets = st.number_input('How many wickets down?')
+    wickets = st.number_input('How many wickets down?',min_value=0,max_value=10, value=5, step=1)
 
 col5, col6, col7 = st.columns(3)
 
 with col5:
-    overs = st.number_input('How many overs done?')
+    overs = st.number_input('How many overs done?',min_value=0,max_value=19, value=5, step=1)
 
 with col6:
-    balls = st.number_input('How many balls left in this over?')
+    balls = st.number_input('How many balls left in this over?',min_value=0,max_value=10, value=3, step=1)
 
 with col7:
-    last_five = st.number_input("Runs scored in last 5 overs:")
+    last_five = st.number_input("Runs scored in last 5 overs:",min_value=0,max_value=120, value=30, step=1)
     
 
     
