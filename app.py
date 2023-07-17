@@ -66,7 +66,7 @@ if st.button("Predict Score"):
     powerplay = 1 if overs<=6 else 0
     balls = 6 - balls
     input_df = pd.DataFrame({'batting_team':batting_team, 'city':city, 'bowling_team':bowling_team, 'score':current_score, 'balls_left':balls_left,
-       'wickets_left':wickets_rem, 'crr':crr, 'powerplay':powerplay, 'death_overs':death_overs, 'top_order_batsmen':top_order,
+       'wickets_left':(10-wickets), 'crr':crr, 'powerplay':powerplay, 'death_overs':death_overs, 'top_order_batsmen':top_order,
        'middle_order_batsmen':middle_order, 'lower_order_batsmen':bottom_order, 'tail_order_batsmen':tail,
        'pressure_play':pressure, 'last_5_overs_score':last_five, 'agressive':agresive}, index=[0])
     
