@@ -19,8 +19,8 @@ cities = ['Lauderhill', 'St Lucia', 'Nottingham', 'Cape Town',
        'Adelaide', 'Delhi', 'Ahmedabad', 'Gros Islet', 'Brisbane',
        'Lucknow']
 
-st.title("International T20 Score Predictor")
-
+st.title("International T20 Target Score Predictor")
+st.markdown("""Predict the __`target score`__ for the T20 match you're watching right now with this tool and stay ahead of the game! """)
 col1, col2 = st.columns(2)
 
 with col1:
@@ -31,7 +31,7 @@ with col2:
     
 city = st.selectbox('Select city', sorted(cities))
 
-col3,col4,col5, col6 = st.columns(4)
+col3,col4,col5 = st.columns(3)
 
 with col3:
     current_score = st.number_input('Current Score:')
@@ -40,12 +40,13 @@ with col4:
     overs = st.number_input('How many overs done?')
 
 with col5:
-    wickets_rem = st.number_input('How many wickets remaining?')
-    
-with col6:
-    balls = st.number_input('How many balls in this over?')
+    balls = st.number_input('How many balls left in this over?')
 
-col7, col8 = st.columns(2)
+    
+col6, col7 = st.columns(2)
+
+with col6:
+    wickets = st.number_input('How many wickets down?')
 
 with col7:
     last_five = st.number_input("Runs scored in last 5 overs:")
@@ -53,7 +54,6 @@ with col7:
 
     
 if st.button("Predict Score"):
-    wickets = 10 - wickets_rem
     crr = current_score/(overs*6 + balls)
     balls_remaining = 120 - balls
     death_overs = 1 if overs>=15 else 0
@@ -65,6 +65,7 @@ if st.button("Predict Score"):
     agresive = 1 if last_five>=45 else 0
     balls_left = overs*6 + balls
     powerplay = 1 if overs<=6 else 0
+    balls = 6 - balls
     input_df = pd.DataFrame({'batting_team':batting_team, 'city':city, 'bowling_team':bowling_team, 'score':current_score, 'balls_left':balls_left,
        'wickets_left':wickets_rem, 'crr':crr, 'powerplay':powerplay, 'death_overs':death_overs, 'top_order_batsmen':top_order,
        'middle_order_batsmen':middle_order, 'lower_order_batsmen':bottom_order, 'tail_order_batsmen':tail,
