@@ -50,8 +50,7 @@ col7, col8 = st.columns(2)
 with col7:
     last_five = st.number_input("Runs scored in last 5 overs:")
     
-with col8:
-    powerplay = st.checkbox("Is it powerplay?",0)
+
     
 if st.button("Predict Score"):
     wickets = 10 - wickets_rem
@@ -65,6 +64,7 @@ if st.button("Predict Score"):
     pressure = 1 if (crr<7)&(overs>=2) else 0
     agresive = 1 if last_five>=45 else 0
     balls_left = overs*6 + balls
+    powerplay = 1 if overs<=6 else 0
     input_df = pd.DataFrame({'batting_team':batting_team, 'city':city, 'bowling_team':bowling_team, 'score':current_score, 'balls_left':balls_left,
        'wickets_left':wickets_rem, 'crr':crr, 'powerplay':powerplay, 'death_overs':death_overs, 'top_order_batsmen':top_order,
        'middle_order_batsmen':middle_order, 'lower_order_batsmen':bottom_order, 'tail_order_batsmen':tail,
@@ -72,7 +72,7 @@ if st.button("Predict Score"):
     
     result = pipeline.predict(input_df)
     
-    st.header("Predicted Score should be between: " + str(int(result[0])) + " - " + str(int(result[0])+16))
+    st.header("Predicted Score should be between: " + str(int(result[0])+11) + " - " + str(int(result[0])+22))
     
     pass
 
