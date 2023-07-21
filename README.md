@@ -7,6 +7,7 @@ The primary objective here is to predict the final score in the first innings at
 1. Data collection from source: https://cricsheet.org/downloads/
   - Data was present as a seperate YAML file for each match.
   - These datasets were manipulated heavily to convert from a JSON formatting to a tabular structure.
+  - Link to the exact source: https://cricsheet.org/downloads/all.zip
 
 2. Data Cleaning
   - This includes cleaning JSON-artefacted values to columnar values.
@@ -20,6 +21,7 @@ The primary objective here is to predict the final score in the first innings at
       - Death overs
       - Under pressure
       - Agressive stance
+  - Cleaned and feature engineered output is the `t2_cleaned.csv` file
 
 4. Finally, preparing the data for modelling and retaining columns which had value.
   - Built a `XGB Regressor` model with
