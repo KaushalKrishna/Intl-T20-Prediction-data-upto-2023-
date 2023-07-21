@@ -23,7 +23,7 @@ The primary objective here is to predict the final score in the first innings at
       - Agressive stance
   - Cleaned and feature engineered output is the `t2_cleaned.csv` file
 
-4. Finally, preparing the data for modelling and retaining columns which had value.
+4. Finally, preparing the data for modelling and retaining columns which were useful and made sure to control the dimensionality.
   - Built a `XGB Regressor` model with
     - __95.3% R2 Score__
     - __RMSE__ of __5.2__
