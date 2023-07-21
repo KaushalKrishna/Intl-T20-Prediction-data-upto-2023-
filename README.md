@@ -9,8 +9,8 @@ The primary objective here is to predict the final score in the first innings at
   - These datasets were manipulated heavily to convert from a JSON formatting to a tabular structure.
 
 2. Data Cleaning
-  - This includes cleaning up dictionary formatted JSON values to columnar values.
-  - Redacting over 120 columns and wrangling other columns to product 17 usable columns
+  - This includes cleaning JSON-artefacted values to columnar values.
+  - Redacting over 120 columns and wrangling other columns to produce 17 usable columns
 
 3. Feature Engineering
   - Several columns were created using the data presented, such as:
